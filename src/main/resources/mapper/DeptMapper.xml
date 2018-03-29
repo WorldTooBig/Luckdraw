@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper用于映射dao的接口，namespace指定Dao接口的完整类名 -->
+<mapper namespace="com.luckdraw.dao.IDeptDao">
+    <!--配置用户映射-->
+    <resultMap id="userMap" type="user">
+        <id column="uid" property="uid"/>
+        <result column="uname" property="uname"/>
+        <result column="uimg" property="uimg"/>
+    </resultMap>
+    <!--配置部门映射-->
+    <resultMap id="deptMap" type="dept">
+        <id column="did" property="did"/>
+        <result column="dname" property="dname"/>
+        <!-- collection处理a-has关系（一对多映射关系）-->
+        <!-- <collection property="user" resultMap="userMap"/> -->
+    </resultMap>
+</mapper>
