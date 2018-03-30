@@ -10,7 +10,7 @@
 </head>
 <body style="height:95%; background-image: url('image/bigBackground.jpg'); background-repeat:no-repeat; background-size:100% 100%;">
 
-	<%-- <jsp:forward page="pages/config.jsp"/> --%>
+	<%-- <jsp:forward page="pages/config.jsp"/> you--%>
  	<a href="pages/config.jsp" class="btn_a">奖项设置</a>
  	
  	<!-- 灰色背景大div -->
