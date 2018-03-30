@@ -18,7 +18,7 @@
  	
  		<div style="width:80%; float: left;">
  			<!-- 头像div -->
- 			<div id="headImg" style="width:200px; height:170px;; border: solid 1px red; margin:50px auto; margin-top: 100px; background-size:100% 100%;">
+ 			<div id="headImg" style="width:200px; height:170px;; border: solid 1px red; margin:40px auto; margin-top: 100px; background-size:100% 100%;">
  				<!-- 显示姓名的div -->
 				<div id="uname"
 					style="width: 100%; height: 30px; position: relative; bottom: -140px; background-color: gray; opacity: 0.7; color: white; font-size:20px; font-weight:20px; text-align: center; line-height: 30px;"></div>
@@ -34,7 +34,6 @@
 	 			<br />
 	 			<input type="button" id="start" value="立即抽取" class="btn" disabled onclick="start()" />
 	 			<input type="button" id="end" value="停止" class="btn" disabled onclick="end()" /><br />
-	 			<span id="span"></span>
  			</div>
  		</div>
 		<div id="drawList" style="float:right; width:300px; height:100%; border: solid 1px black; border-width: 0 1px;">
@@ -96,7 +95,6 @@
 	}
 	
 	function getUser (i) {
-		$("#span").text(i);
 		//设置头像
 		$("#headImg").css("background-image","url("+userList[i].uimg+")");
 		//名字

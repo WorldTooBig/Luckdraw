@@ -123,7 +123,6 @@
 			alert("请选择头像后再进行操作");
 		} else {
 			param += "&uimg=image/" + $val;
-			alert(param);
 			$.post("../userAction/addUsers", param, function(data){
 				if(data > 0) {
 					$("#tab tr:not(:first)").remove();
