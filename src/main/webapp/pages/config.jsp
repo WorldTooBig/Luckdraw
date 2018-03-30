@@ -125,6 +125,7 @@
 		$.post("../rulesAction/addRules", param, function(data) {
 			if (data == 1) {
 				$("#select option").eq(0).prop("disabled", false);
+				changeText();
 				oldPlan();
 			}
 		});
