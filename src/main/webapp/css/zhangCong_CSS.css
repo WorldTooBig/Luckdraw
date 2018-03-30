@@ -1,0 +1,68 @@
+
+
+.btn_a{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      background: #02bafa;
+      border: 1px #26bbdb solid;
+      border-radius: 10px;
+      /*color: #fff;*/
+      display: inline-block;
+      text-decoration: none;
+      font-size: 20px;
+      outline: none;
+}
+
+.btn{
+	padding: 10px 20px;
+	margin:20px 30px;
+	background: #F29807;
+	color: #fff;
+	border: none;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.btn_min{
+	padding: 5px 30px;
+	background: #F55;
+	border: none;
+    border-radius: 5px;
+}
+
+
+th,td{
+	height: 40px;
+	width: 155px;
+}
+
+
+li{
+	list-style-type:none;
+	padding:5px 0px;
+	margin:0;
+}
+
+
+input[name="drawCount"]{
+  box-sizing: border-box;
+  text-align:center;
+  width: 50px;
+  height:20px;
+  border-radius:4px;
+  border:1px solid #c8cccf;
+  color:#6a6f77;
+  -web-kit-appearance:none;
+  -moz-appearance: none;
+  display: inline-block;
+  outline:0;
+  padding:0 10px;
+  text-decoration:none;
+}
+input[name="drawCount"]:focus{
+  border:1px solid #ff7496;
+}
+
+
+

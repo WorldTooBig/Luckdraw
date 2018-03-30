@@ -6,37 +6,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/zhangCong_CSS.css"></link>
 </head>
 <body>
-
+<div style="margin: 5% auto; width:800px;" ><center>
 	<h2>设置奖项</h2>
-	<ul id="draw">
+	<ul id="draw" class="none" style="list-style-type:none; margin:0px; padding:0px;">
 		<li>一等奖<input name="drawCount" oninput="changeText()"/>人</li>
 		<li>二等奖<input name="drawCount" oninput="changeText()"/>人</li>
 		<li>三等奖<input name="drawCount" oninput="changeText()"/>人</li>
 		<li>
-			<input type="button" value="+" onclick="increase()" />
-			<input type="button" value="-" onclick="reduce()" />
+			<input type="button" value="+" class="btn_min" onclick="increase()" />
+			<input type="button" value="-" class="btn_min" onclick="reduce()" />
 		</li>
 	</ul>
-	
-	<input id="rdone" type="checkbox" />同一部门是否只能有一个人中奖<br />
-	<input id="rfor" type="checkbox" />是否可以重复中奖<br />
-	共<span id="span_sum">0</span>个奖项
 	<br />
-	<input type="button" value="选择该方案" onclick="yesDraw()" />
-	<p><br></p>
-	往期抽奖方案：
+	<input id="rdone" type="checkbox" /><label for="rdone">同一部门是否只能有一个人中奖</label><br /><br />
+	<input id="rfor" type="checkbox" /><label for="rfor">是否可以重复中奖</label><br /><br />
+	共<span id="span_sum" style="font-size: 20px; color: red; font-weight: 20px; margin: 0 3px;">0</span>个奖项
+	<br />
+	<input type="button" value="选择该方案" class="btn" onclick="yesDraw()" />
+	<br />
+	往期抽奖方案：<br />
 	<select id="select">
 		<option>· · · · · ·</option>
 	</select>
 	<br />
-	<input type="button" value="使用" onclick="application()" />
-	<br />
+	<input type="button" value="使用" class="btn" onclick="application()" />
 	<br /><br /><br />
-	<a href="${pageContext.request.contextPath}/index.jsp">抽奖页面</a><br /><br />
-	<a href="${pageContext.request.contextPath}/pages/userList.jsp">用户设置</a>
+	<a href="${pageContext.request.contextPath}/index.jsp" class="btn_a" style="margin-right: 50px;">抽奖页面</a>
+	<a href="${pageContext.request.contextPath}/pages/userList.jsp" class="btn_a">用户设置</a>
+	</center>
+</div>
 </body>
 <script type="text/javascript">
 

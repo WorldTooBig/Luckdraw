@@ -1,39 +1,46 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html style="height:100%;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script src="js/jquery-3.3.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/zhangCong_CSS.css"></link>
 </head>
-<body style=" background-image: url('image/bigBackground1.jpg');background-size:100% 100%;">
+<body style="height:95%; background-image: url('image/bigBackground.jpg'); background-repeat:no-repeat; background-size:100% 100%;">
 
 	<%-- <jsp:forward page="pages/config.jsp"/> --%>
- 	<a href="pages/config.jsp">奖项设置</a>
+ 	<a href="pages/config.jsp" class="btn_a">奖项设置</a>
  	
- 	<div style="width:94%; height:900px; position: fixed; left:3%; background: RGBA(0,0,0,0.2)">
+ 	<!-- 灰色背景大div -->
+ 	<div style="width:94%; height:90%; position: fixed; left:3%; background: RGBA(0,0,0,0.2)">
+ 	
  		<div style="width:80%; float: left;">
- 			<div id="headImg" style="width:200px; height:170px; border: solid 1px red; margin:0 auto; background-size:100% 100%;">
+ 			<!-- 头像div -->
+ 			<div id="headImg" style="width:200px; height:170px;; border: solid 1px red; margin:50px auto; margin-top: 100px; background-size:100% 100%;">
+ 				<!-- 显示姓名的div -->
 				<div id="uname"
 					style="width: 100%; height: 30px; position: relative; bottom: -140px; background-color: gray; opacity: 0.7; color: white; font-size:20px; font-weight:20px; text-align: center; line-height: 30px;"></div>
 				<div id="uid" style="display:none"></div>
  				<div id="dname" style="display:none"></div>
  			</div>
  			<div style="text-align: center;">
-	 			现在抽取
+	 			
 	 			<select id="selectDraw" onchange="selLuck()">
 	 				<option>请选择要抽取的奖项</option>
-	 			</select><br>
+	 			</select><br><br>
 	 			<span id="selSpan"></span>
 	 			<br />
-	 			<input type="button" id="start" value="立即抽取" disabled onclick="start()" />
-	 			<input type="button" id="end" value="停止" disabled onclick="end()" /><br />
+	 			<input type="button" id="start" value="立即抽取" class="btn" disabled onclick="start()" />
+	 			<input type="button" id="end" value="停止" class="btn" disabled onclick="end()" /><br />
 	 			<span id="span"></span>
  			</div>
  		</div>
-		<div id="drawList" style="float:right; width:300px; height:100%; border: solid 1px black;">
-			中奖名单
+		<div id="drawList" style="float:right; width:300px; height:100%; border: solid 1px black; border-width: 0 1px;">
+			<div style="heigth: 30px; line-height: 30px; text-align: center; color: #F7B; font-size: 20px; font-weight: 100em;">
+				<h2>中奖名单</h2>
+			</div>
 			<hr />
 			<ol></ol>
 			
